@@ -14,7 +14,7 @@ CODIGO:
 
 ```
 		
-		module MUX
+module MUX
     input [3:0]d0,
 	input [3:0]d1,
   //input [3:0]d2, 
