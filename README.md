@@ -16,7 +16,7 @@ CODIGO:
 		
 module MUX
     input [3:0]d0,
-	input [3:0]d1,
+    input [3:0]d1,
   //input [3:0]d2, 
   //input [3:0]d3,
     input clk,
@@ -35,7 +35,7 @@ always @(*)
 			0 : mux_sal <= d0;
 			1 : mux_sal <= d1;
 			2 : mux_sal <= 10; //d2
-      default : mux_sal <= 10; //d3
+                  default : mux_sal <= 10; //d3
 	 endcase
 		
 always @(*)
@@ -43,7 +43,7 @@ always @(*)
 			0 : en <= 4'b1011;
 			1 : en <= 4'b1101;
 			2 : en <= 4'b1111; //Inhabilitado
-      default : en <= 4'b1111; //Inhabilitado
+                  default : en <= 4'b1111; //Inhabilitado
 	 endcase
 	 
 always @(posedge clk)
@@ -68,8 +68,8 @@ always @(posedge clk_200)
 
 always @(*)
       case (mux_sal)
-			4'b0000 : seg7 <= 7'b0000001;   // 0
-			4'b0001 : seg7 <= 7'b1001111;   // 1
+	    4'b0000 : seg7 <= 7'b0000001;   // 0
+            4'b0001 : seg7 <= 7'b1001111;   // 1
             4'b0010 : seg7 <= 7'b0010010;   // 2
             4'b0011 : seg7 <= 7'b0000110;   // 3
             4'b0100 : seg7 <= 7'b1001100;   // 4
