@@ -10,10 +10,11 @@ El segundo mux  seleccionara el display (d0,d1) que enviara la señal a un regis
 Los cambios en la seleccion de entrada en los dispositivos viene dado por un contador que cada 5nS, activa el registro "clk_200"
 el cual modifica el valor del registro de 2bits que actua como entrada de seleccion de ambos multiplexores.
 
-
 CODIGO:
 
-module MUX
+```
+		
+		module MUX
     input [3:0]d0,
 	input [3:0]d1,
   //input [3:0]d2, 
@@ -79,3 +80,6 @@ always @(*)
 
 	  endcase
 endmodule
+		
+```
+  
